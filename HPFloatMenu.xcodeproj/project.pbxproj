@@ -15,6 +15,10 @@
 		0ED0951E226E05EE0075C6AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED0951C226E05EE0075C6AE /* Main.storyboard */; };
 		0ED09520226E05F00075C6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ED0951F226E05F00075C6AE /* Assets.xcassets */; };
 		0ED09523226E05F00075C6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED09521226E05F00075C6AE /* LaunchScreen.storyboard */; };
+		0ED09529226E08D10075C6AE /* FloatMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED09528226E08D10075C6AE /* FloatMenuView.swift */; };
+		33B3771EDCB1089BA485395E /* Pods_HPFloatMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480E34F187885DE11A5ADD1C /* Pods_HPFloatMenuTests.framework */; };
+		C9EE7A7A149E151B597D78D5 /* Pods_HPFloatMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8928569A9D7F45EAC9F53B /* Pods_HPFloatMenu.framework */; };
+		E9BAF37D5BFB70AF69C5970D /* Pods_HPFloatMenuExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BE7E2DDF80ED96186D92F2 /* Pods_HPFloatMenuExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,16 @@
 		0ED0951F226E05F00075C6AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ED09522226E05F00075C6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ED09524226E05F00075C6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ED09528226E08D10075C6AE /* FloatMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatMenuView.swift; sourceTree = "<group>"; };
+		424B20CF4DA8B374253142BB /* Pods-HPFloatMenuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPFloatMenuTests.debug.xcconfig"; path = "Target Support Files/Pods-HPFloatMenuTests/Pods-HPFloatMenuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		480E34F187885DE11A5ADD1C /* Pods_HPFloatMenuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPFloatMenuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64E4C94CD0DA2495D98A4300 /* Pods-HPFloatMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPFloatMenu.release.xcconfig"; path = "Target Support Files/Pods-HPFloatMenu/Pods-HPFloatMenu.release.xcconfig"; sourceTree = "<group>"; };
+		6C36A615666C78DEAC90444F /* Pods-HPFloatMenuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPFloatMenuTests.release.xcconfig"; path = "Target Support Files/Pods-HPFloatMenuTests/Pods-HPFloatMenuTests.release.xcconfig"; sourceTree = "<group>"; };
+		774C9F421B97AF2F8C700EC7 /* Pods-HPFloatMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPFloatMenu.debug.xcconfig"; path = "Target Support Files/Pods-HPFloatMenu/Pods-HPFloatMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		7F8928569A9D7F45EAC9F53B /* Pods_HPFloatMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPFloatMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5ED05256C028731AC6717CA /* Pods-HPFloatMenuExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPFloatMenuExample.release.xcconfig"; path = "Target Support Files/Pods-HPFloatMenuExample/Pods-HPFloatMenuExample.release.xcconfig"; sourceTree = "<group>"; };
+		B1BE7E2DDF80ED96186D92F2 /* Pods_HPFloatMenuExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPFloatMenuExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC89B056FC400F2EEFA891C1 /* Pods-HPFloatMenuExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPFloatMenuExample.debug.xcconfig"; path = "Target Support Files/Pods-HPFloatMenuExample/Pods-HPFloatMenuExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9EE7A7A149E151B597D78D5 /* Pods_HPFloatMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED09502226E054B0075C6AE /* HPFloatMenu.framework in Frameworks */,
+				33B3771EDCB1089BA485395E /* Pods_HPFloatMenuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9BAF37D5BFB70AF69C5970D /* Pods_HPFloatMenuExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +93,8 @@
 				0ED09505226E054B0075C6AE /* HPFloatMenuTests */,
 				0ED09517226E05EE0075C6AE /* HPFloatMenuExample */,
 				0ED094F9226E054B0075C6AE /* Products */,
+				8A0B2BE921CD4E1E9DAA91EF /* Pods */,
+				77E3E6F20E7E861F0CB1B390 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +113,7 @@
 			children = (
 				0ED094FB226E054B0075C6AE /* HPFloatMenu.h */,
 				0ED094FC226E054B0075C6AE /* Info.plist */,
+				0ED09528226E08D10075C6AE /* FloatMenuView.swift */,
 			);
 			path = HPFloatMenu;
 			sourceTree = "<group>";
@@ -120,6 +140,30 @@
 			path = HPFloatMenuExample;
 			sourceTree = "<group>";
 		};
+		77E3E6F20E7E861F0CB1B390 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F8928569A9D7F45EAC9F53B /* Pods_HPFloatMenu.framework */,
+				B1BE7E2DDF80ED96186D92F2 /* Pods_HPFloatMenuExample.framework */,
+				480E34F187885DE11A5ADD1C /* Pods_HPFloatMenuTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A0B2BE921CD4E1E9DAA91EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				774C9F421B97AF2F8C700EC7 /* Pods-HPFloatMenu.debug.xcconfig */,
+				64E4C94CD0DA2495D98A4300 /* Pods-HPFloatMenu.release.xcconfig */,
+				BC89B056FC400F2EEFA891C1 /* Pods-HPFloatMenuExample.debug.xcconfig */,
+				A5ED05256C028731AC6717CA /* Pods-HPFloatMenuExample.release.xcconfig */,
+				424B20CF4DA8B374253142BB /* Pods-HPFloatMenuTests.debug.xcconfig */,
+				6C36A615666C78DEAC90444F /* Pods-HPFloatMenuTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -138,6 +182,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ED0950C226E054B0075C6AE /* Build configuration list for PBXNativeTarget "HPFloatMenu" */;
 			buildPhases = (
+				77738F6ADE5C64774AE6560B /* [CP] Check Pods Manifest.lock */,
 				0ED094F3226E054B0075C6AE /* Headers */,
 				0ED094F4226E054B0075C6AE /* Sources */,
 				0ED094F5226E054B0075C6AE /* Frameworks */,
@@ -156,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ED0950F226E054B0075C6AE /* Build configuration list for PBXNativeTarget "HPFloatMenuTests" */;
 			buildPhases = (
+				5D2241852BBBDB46D8DBB9C5 /* [CP] Check Pods Manifest.lock */,
 				0ED094FD226E054B0075C6AE /* Sources */,
 				0ED094FE226E054B0075C6AE /* Frameworks */,
 				0ED094FF226E054B0075C6AE /* Resources */,
@@ -174,6 +220,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ED09525226E05F00075C6AE /* Build configuration list for PBXNativeTarget "HPFloatMenuExample" */;
 			buildPhases = (
+				0D4046CF2EE7CDB41D51D3AB /* [CP] Check Pods Manifest.lock */,
 				0ED09512226E05EE0075C6AE /* Sources */,
 				0ED09513226E05EE0075C6AE /* Frameworks */,
 				0ED09514226E05EE0075C6AE /* Resources */,
@@ -199,6 +246,7 @@
 				TargetAttributes = {
 					0ED094F7226E054B0075C6AE = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					0ED09500226E054B0075C6AE = {
 						CreatedOnToolsVersion = 10.2;
@@ -255,11 +303,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D4046CF2EE7CDB41D51D3AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HPFloatMenuExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D2241852BBBDB46D8DBB9C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HPFloatMenuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77738F6ADE5C64774AE6560B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HPFloatMenu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0ED094F4226E054B0075C6AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED09529226E08D10075C6AE /* FloatMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +552,9 @@
 		};
 		0ED0950D226E054B0075C6AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 774C9F421B97AF2F8C700EC7 /* Pods-HPFloatMenu.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -451,6 +571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.quanghoang.HPFloatMenu;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,7 +579,9 @@
 		};
 		0ED0950E226E054B0075C6AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64E4C94CD0DA2495D98A4300 /* Pods-HPFloatMenu.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -482,7 +605,9 @@
 		};
 		0ED09510226E054B0075C6AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 424B20CF4DA8B374253142BB /* Pods-HPFloatMenuTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HPFloatMenuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,7 +624,9 @@
 		};
 		0ED09511226E054B0075C6AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C36A615666C78DEAC90444F /* Pods-HPFloatMenuTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HPFloatMenuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -516,6 +643,7 @@
 		};
 		0ED09526226E05F00075C6AE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC89B056FC400F2EEFA891C1 /* Pods-HPFloatMenuExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -533,6 +661,7 @@
 		};
 		0ED09527226E05F00075C6AE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5ED05256C028731AC6717CA /* Pods-HPFloatMenuExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
