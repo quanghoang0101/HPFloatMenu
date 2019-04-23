@@ -1,10 +1,10 @@
-language: objective-c
+language: swift
 
-osx_image: xcode10.1
-env:
-  matrix:
-    - TEST_SDK=iphonesimulator12.1 OS=12.1 NAME='iPhone XR'
-    - TEST_SDK=iphonesimulator12.1 OS=12.1 NAME='iPhone 7'
+osx_image: xcode10.2
 
 script:
-  - set -o pipefail && xcodebuild test -enableCodeCoverage YES -project HPFloatMenu.xcworkspace -scheme HPFloatMenu -sdk $TEST_SDK -destination "platform=iOS Simulator,OS=$OS,name=$NAME" ONLY_ACTIVE_ARCH=YES
+  - xcodebuild -scheme HPFloatMenu -workspace HPFloatMenu.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=9.1' build test
+
+after_success:
+  - slather
+  - bash <(curl -s https://codecov.io/bash) -f reports/cobertura.xml -X coveragepy -X gcov -X xcode

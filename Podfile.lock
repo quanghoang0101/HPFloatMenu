@@ -1,16 +1,24 @@
 PODS:
+  - HPFloatMenu (0.0.1):
+    - SnapKit
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
+  - HPFloatMenu (from `/Users/macintoshhd/Documents/Githup/HPFloatMenu`)
   - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - SnapKit
 
+EXTERNAL SOURCES:
+  HPFloatMenu:
+    :path: "/Users/macintoshhd/Documents/Githup/HPFloatMenu"
+
 SPEC CHECKSUMS:
+  HPFloatMenu: 42bc5da99cfd6ab8d0a316c35796977b9803fedc
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: d90f955f58c3eccae6e5eed087aa5be59cc98acf
+PODFILE CHECKSUM: 599f26cccc2898a966480ab4e243ccae271fcab0
 
 COCOAPODS: 1.6.1

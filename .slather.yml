@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+xcodeproj: HPFloatMenu.xcworkspace
+scheme: HPFloatMenu
+output_directory: reports
+ignore:
+  - HPFloatMenuTests/*

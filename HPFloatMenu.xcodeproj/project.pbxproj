@@ -16,6 +16,11 @@
 		0ED09520226E05F00075C6AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ED0951F226E05F00075C6AE /* Assets.xcassets */; };
 		0ED09523226E05F00075C6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED09521226E05F00075C6AE /* LaunchScreen.storyboard */; };
 		0ED09529226E08D10075C6AE /* FloatMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED09528226E08D10075C6AE /* FloatMenuView.swift */; };
+		0ED0952B226E130B0075C6AE /* FloatMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0952A226E130B0075C6AE /* FloatMenuItem.swift */; };
+		0ED0952D226ECD5E0075C6AE /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0952C226ECD5E0075C6AE /* UIColor+Extensions.swift */; };
+		0ED0952F226ED02C0075C6AE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED0952E226ED02C0075C6AE /* UIView+Extensions.swift */; };
+		0ED09531226ED1A90075C6AE /* FloatMenuPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED09530226ED1A90075C6AE /* FloatMenuPosition.swift */; };
+		0ED09534226ED2550075C6AE /* FloatMenuAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED09533226ED2550075C6AE /* FloatMenuAnimation.swift */; };
 		33B3771EDCB1089BA485395E /* Pods_HPFloatMenuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480E34F187885DE11A5ADD1C /* Pods_HPFloatMenuTests.framework */; };
 		C9EE7A7A149E151B597D78D5 /* Pods_HPFloatMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8928569A9D7F45EAC9F53B /* Pods_HPFloatMenu.framework */; };
 		E9BAF37D5BFB70AF69C5970D /* Pods_HPFloatMenuExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BE7E2DDF80ED96186D92F2 /* Pods_HPFloatMenuExample.framework */; };
@@ -46,6 +51,11 @@
 		0ED09522226E05F00075C6AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ED09524226E05F00075C6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ED09528226E08D10075C6AE /* FloatMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatMenuView.swift; sourceTree = "<group>"; };
+		0ED0952A226E130B0075C6AE /* FloatMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatMenuItem.swift; sourceTree = "<group>"; };
+		0ED0952C226ECD5E0075C6AE /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		0ED0952E226ED02C0075C6AE /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		0ED09530226ED1A90075C6AE /* FloatMenuPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatMenuPosition.swift; sourceTree = "<group>"; };
+		0ED09533226ED2550075C6AE /* FloatMenuAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatMenuAnimation.swift; sourceTree = "<group>"; };
 		424B20CF4DA8B374253142BB /* Pods-HPFloatMenuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPFloatMenuTests.debug.xcconfig"; path = "Target Support Files/Pods-HPFloatMenuTests/Pods-HPFloatMenuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		480E34F187885DE11A5ADD1C /* Pods_HPFloatMenuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPFloatMenuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E4C94CD0DA2495D98A4300 /* Pods-HPFloatMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPFloatMenu.release.xcconfig"; path = "Target Support Files/Pods-HPFloatMenu/Pods-HPFloatMenu.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +124,10 @@
 				0ED094FB226E054B0075C6AE /* HPFloatMenu.h */,
 				0ED094FC226E054B0075C6AE /* Info.plist */,
 				0ED09528226E08D10075C6AE /* FloatMenuView.swift */,
+				0ED0952A226E130B0075C6AE /* FloatMenuItem.swift */,
+				0ED09530226ED1A90075C6AE /* FloatMenuPosition.swift */,
+				0ED09533226ED2550075C6AE /* FloatMenuAnimation.swift */,
+				0ED09532226ED1AE0075C6AE /* Extensions */,
 			);
 			path = HPFloatMenu;
 			sourceTree = "<group>";
@@ -140,6 +154,15 @@
 			path = HPFloatMenuExample;
 			sourceTree = "<group>";
 		};
+		0ED09532226ED1AE0075C6AE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0ED0952C226ECD5E0075C6AE /* UIColor+Extensions.swift */,
+				0ED0952E226ED02C0075C6AE /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		77E3E6F20E7E861F0CB1B390 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +183,6 @@
 				424B20CF4DA8B374253142BB /* Pods-HPFloatMenuTests.debug.xcconfig */,
 				6C36A615666C78DEAC90444F /* Pods-HPFloatMenuTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -224,6 +246,7 @@
 				0ED09512226E05EE0075C6AE /* Sources */,
 				0ED09513226E05EE0075C6AE /* Frameworks */,
 				0ED09514226E05EE0075C6AE /* Resources */,
+				61C8CA317C8569C9B55AC8C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,6 +371,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		61C8CA317C8569C9B55AC8C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HPFloatMenuExample/Pods-HPFloatMenuExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/HPFloatMenu/HPFloatMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPFloatMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HPFloatMenuExample/Pods-HPFloatMenuExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		77738F6ADE5C64774AE6560B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,6 +424,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED09531226ED1A90075C6AE /* FloatMenuPosition.swift in Sources */,
+				0ED0952B226E130B0075C6AE /* FloatMenuItem.swift in Sources */,
+				0ED09534226ED2550075C6AE /* FloatMenuAnimation.swift in Sources */,
+				0ED0952D226ECD5E0075C6AE /* UIColor+Extensions.swift in Sources */,
+				0ED0952F226ED02C0075C6AE /* UIView+Extensions.swift in Sources */,
 				0ED09529226E08D10075C6AE /* FloatMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
