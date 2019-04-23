@@ -8,10 +8,10 @@
 
 import UIKit
 
-class FloatMenuItem: NSObject {
+public class FloatMenuItem: NSObject {
 
     // MARK: -
-    var iconSize: CGFloat = 12 {
+    public var iconSize: CGFloat = 12 {
         didSet {
             iconView.snp.updateConstraints { (maker) in
                 maker.width.height.equalTo(iconSize)
@@ -19,31 +19,31 @@ class FloatMenuItem: NSObject {
         }
     }
 
-    var colorTitle: UIColor = UIColor(hexString: "#CFCFCF")! {
+    public var colorTitle: UIColor = UIColor(hexString: "#CFCFCF")! {
         didSet {
             titleLabel.textColor = colorTitle
         }
     }
 
-    var colorIcon: UIColor = UIColor(hexString: "#CFCFCF")! {
+    public var colorIcon: UIColor = UIColor(hexString: "#CFCFCF")! {
         didSet {
             iconView.backgroundColor = colorIcon
         }
     }
 
-    var title: String? {
+    public var title: String? {
         didSet {
             self.titleLabel.text = title
         }
     }
 
-    var icon: UIImage? {
+    public var icon: UIImage? {
         didSet {
             self.iconView.image = icon
         }
     }
 
-    var isHidden: Bool = false {
+    public var isHidden: Bool = false {
         didSet {
             self.containerView.isHidden = isHidden
         }
@@ -96,24 +96,31 @@ class FloatMenuItem: NSObject {
     }()
 
     // MARK: - Init
-    init(with title: String, icon: UIImage) {
+    public init(with title: String, icon: UIImage) {
         super.init()
-        self.title = title
-        self.icon = icon
 
+        self.title = title
+        self.titleLabel.text = title
+
+        self.icon = icon
+        self.iconView.image = icon
+        
         self.button.backgroundColor = .clear
         self.iconView.applyRadius(radius: iconSize/2.0)
     }
 
-    init(with title: String, colorIcon: UIColor) {
+    public init(with title: String, colorIcon: UIColor) {
         super.init()
         self.title = title
         self.colorIcon = colorIcon
 
         self.title = title
-        self.colorIcon = colorIcon
-        self.button.backgroundColor = .clear
+        self.titleLabel.text = title
 
+        self.colorIcon = colorIcon
+        self.iconView.backgroundColor = colorIcon
+
+        self.button.backgroundColor = .clear
         self.iconView.applyRadius(radius: iconSize/2.0)
     }
 }

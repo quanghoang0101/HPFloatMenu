@@ -9,30 +9,40 @@
 import UIKit
 import SnapKit
 
-class FloatMenuView: UIView {
+public class FloatMenuView: UIView {
 
     // MARK: -
-    var colorOverlay: UIColor = UIColor(white: 0, alpha: 0.5) {
+    public var colorOverlay: UIColor = UIColor(white: 0, alpha: 0.5) {
         didSet {
             overlayView.backgroundColor = colorOverlay
         }
     }
 
-    open var animationSpeed: Double = 0.1
-    open var spacingItem: CGFloat = 35
-    open var position: MenuPosition = .bottom
-    open var animation: FloatMenuAnimation = .fromLeft
+    public var animationSpeed: Double = 0.1
+    public var spacingItem: CGFloat = 35
+    public var position: MenuPosition = .bottom
+    public var animation: FloatMenuAnimation = .fromLeft
 
     // MARK: - Lazy properties
     private lazy var overlayView: UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = colorOverlay
+        self.addSubview(view)
+        view.snp.makeConstraints { (maker) in
+            maker.leading.top.trailing.bottom.equalToSuperview()
+        }
         return view
     }()
 
     private lazy var mainView: UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = .clear
+        self.addSubview(view)
+        view.snp.makeConstraints { (maker) in
+            maker.leading.top.trailing.bottom.equalToSuperview()
+        }
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismiss(_ :)))
+        view.addGestureRecognizer(tapGesture)
         return view
     }()
 
@@ -46,13 +56,13 @@ class FloatMenuView: UIView {
     private weak var parentView: UIView?
 
     // MARK: - Init
-    init(frame: CGRect, position: MenuPosition, animation: FloatMenuAnimation) {
+    public init(frame: CGRect, position: MenuPosition, animation: FloatMenuAnimation) {
         super.init(frame: frame)
         self.position = position
         self.animation = animation
     }
 
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
     }
 
@@ -60,20 +70,20 @@ class FloatMenuView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
     }
 
     // MARK: - Public functions
-    func addItem(_ item: FloatMenuItem) {
+    public func addItem(_ item: FloatMenuItem) {
         items.append(item)
     }
 
-    func removeAllItems() {
+    public func removeAllItems() {
         items.removeAll()
     }
 
-    func showMenu(at senderView: UIView, with parentView: UIView) {
+    public func showMenu(at senderView: UIView, with parentView: UIView) {
         // Store sender views
         self.senderView = senderView
         self.parentView = parentView
@@ -107,7 +117,7 @@ class FloatMenuView: UIView {
         let animationGroup = DispatchGroup()
         var delay = 0.0
         self.bringSubviewToFront(self.mainView)
-        var spacing: CGFloat = 0
+        let spacing: CGFloat = spacingItem
 
         for i in 0..<items.count {
             let item = items[i]
@@ -120,14 +130,16 @@ class FloatMenuView: UIView {
             var previousView: UIView!
             if i == 0 {
                 previousView = senderView!
-                spacing = spacingItem
             } else {
                 previousView = items[i-1].containerView
-                spacing = spacingItem
             }
             item.containerView.snp.makeConstraints { (maker) in
+                if i == 0 {
+                    maker.bottom.equalTo(previousView!.snp.top).offset(-spacing)
+                } else {
+                    maker.bottom.equalTo(previousView!.snp.bottom).offset(-spacing)
+                }
                 maker.trailing.equalTo(senderView!.snp.trailing).offset(-self.senderView!.frame.width/2 + item.iconSize/2)
-                maker.bottom.equalTo(previousView!.snp.bottom).offset(-spacing)
             }
             self.layoutIfNeeded()
 
@@ -147,7 +159,7 @@ class FloatMenuView: UIView {
         }
     }
 
-    func dimissItems() {
+    public func dimissItems() {
         var delay = 0.0
         let animationGroup = DispatchGroup()
         for item in items.reversed() {

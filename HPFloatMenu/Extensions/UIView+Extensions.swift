@@ -6,9 +6,9 @@
 //  Copyright © 2019 Quang Hoang. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-extension UIView {
+public extension UIView {
     func applyRadius(radius: CGFloat, borderWidth: CGFloat = 1.0, borderColor: UIColor = UIColor.clear) {
         self.layer.borderColor      = borderColor.cgColor
         self.layer.borderWidth      = borderWidth

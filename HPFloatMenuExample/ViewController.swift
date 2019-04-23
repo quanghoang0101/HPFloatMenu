@@ -12,26 +12,35 @@ import HPFloatMenu
 
 class ViewController: UIViewController {
 
-    lazy var floatMenuView: FloatMenuView = {
-        
-    }()
+    @IBOutlet weak var button: UIButton!
     
+    lazy var floatMenuView: FloatMenuView = {
+        let view = FloatMenuView(frame: .zero)
+        return view
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.button.applyRadius(radius: 30)
+        self.setDefaultItems()
     }
 
-//    func setDefaultItems() {
-//        items.removeAll()
-//
-//        let group = FloatMenuItem(with: "Group", colorIcon: UIColor(hexString: "#CFCFCF")!)
-//        items.append(group)
-//
-//        let watch = FloatMenuItem(with: "Watch", colorIcon: UIColor(hexString: "#969696")!)
-//        items.append(watch)
-//
-//        let settings = FloatMenuItem(with: "Settings", colorIcon: UIColor(hexString: "#6D6C6C")!)
-//        items.append(settings)
-//    }
+    func setDefaultItems() {
+
+        let group = FloatMenuItem(with: "Group", colorIcon: UIColor(hexString: "#CFCFCF")!)
+        floatMenuView.addItem(group)
+
+        let watch = FloatMenuItem(with: "Watch", colorIcon: UIColor(hexString: "#969696")!)
+        floatMenuView.addItem(watch)
+
+        let settings = FloatMenuItem(with: "Settings", colorIcon: UIColor(hexString: "#6D6C6C")!)
+        floatMenuView.addItem(settings)
+    }
+
+    // MARK: - Action
+    @IBAction private func showMenu(_ sender: Any) {
+        self.floatMenuView.showMenu(at: button, with: self.view)
+    }
 }
 

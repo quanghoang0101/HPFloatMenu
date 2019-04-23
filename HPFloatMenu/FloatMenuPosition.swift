@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MenuPosition: Int {
+public enum MenuPosition: Int {
     case top = 0
     case left
     case bottom

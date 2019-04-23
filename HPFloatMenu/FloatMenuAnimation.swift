@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum FloatMenuAnimation: Int {
+public enum FloatMenuAnimation: Int {
     case fromRight = 0
     case fromLeft
     case fromCenter
