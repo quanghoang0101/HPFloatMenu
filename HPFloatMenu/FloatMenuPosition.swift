@@ -9,8 +9,8 @@
 import Foundation
 
 public enum MenuPosition: Int {
-    case top = 0
-    case left
-    case bottom
-    case right
+    case topLeft = 0
+    case topRight
+    case bottomLeft
+    case bottomRight
 }

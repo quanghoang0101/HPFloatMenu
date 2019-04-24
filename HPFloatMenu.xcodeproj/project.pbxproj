@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E59FFFA22704C7A002496D8 /* FloatMenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFF922704C7A002496D8 /* FloatMenuItemTests.swift */; };
+		0E59FFFE22706438002496D8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFFD22706438002496D8 /* ListViewController.swift */; };
 		0ED09502226E054B0075C6AE /* HPFloatMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED094F8226E054B0075C6AE /* HPFloatMenu.framework */; };
 		0ED09507226E054B0075C6AE /* HPFloatMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED09506226E054B0075C6AE /* HPFloatMenuTests.swift */; };
 		0ED09509226E054B0075C6AE /* HPFloatMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ED094FB226E054B0075C6AE /* HPFloatMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0E59FFFB22704DF8002496D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ED094EF226E054B0075C6AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ED09515226E05EE0075C6AE;
+			remoteInfo = HPFloatMenuExample;
+		};
 		0ED09503226E054B0075C6AE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0ED094EF226E054B0075C6AE /* Project object */;
@@ -37,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E59FFF922704C7A002496D8 /* FloatMenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatMenuItemTests.swift; sourceTree = "<group>"; };
+		0E59FFFD22706438002496D8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0ED094F8226E054B0075C6AE /* HPFloatMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPFloatMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED094FB226E054B0075C6AE /* HPFloatMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPFloatMenu.h; sourceTree = "<group>"; };
 		0ED094FC226E054B0075C6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				0ED09506226E054B0075C6AE /* HPFloatMenuTests.swift */,
+				0E59FFF922704C7A002496D8 /* FloatMenuItemTests.swift */,
 				0ED09508226E054B0075C6AE /* Info.plist */,
 			);
 			path = HPFloatMenuTests;
@@ -145,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				0ED09518226E05EE0075C6AE /* AppDelegate.swift */,
+				0E59FFFD22706438002496D8 /* ListViewController.swift */,
 				0ED0951A226E05EE0075C6AE /* ViewController.swift */,
 				0ED0951C226E05EE0075C6AE /* Main.storyboard */,
 				0ED0951F226E05F00075C6AE /* Assets.xcassets */,
@@ -232,6 +245,7 @@
 			);
 			dependencies = (
 				0ED09504226E054B0075C6AE /* PBXTargetDependency */,
+				0E59FFFC22704DF8002496D8 /* PBXTargetDependency */,
 			);
 			name = HPFloatMenuTests;
 			productName = HPFloatMenuTests;
@@ -273,6 +287,7 @@
 					};
 					0ED09500226E054B0075C6AE = {
 						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 0ED09515226E05EE0075C6AE;
 					};
 					0ED09515226E05EE0075C6AE = {
 						CreatedOnToolsVersion = 10.2;
@@ -437,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E59FFFA22704C7A002496D8 /* FloatMenuItemTests.swift in Sources */,
 				0ED09507226E054B0075C6AE /* HPFloatMenuTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,12 +463,18 @@
 			files = (
 				0ED0951B226E05EE0075C6AE /* ViewController.swift in Sources */,
 				0ED09519226E05EE0075C6AE /* AppDelegate.swift in Sources */,
+				0E59FFFE22706438002496D8 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0E59FFFC22704DF8002496D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ED09515226E05EE0075C6AE /* HPFloatMenuExample */;
+			targetProxy = 0E59FFFB22704DF8002496D8 /* PBXContainerItemProxy */;
+		};
 		0ED09504226E054B0075C6AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0ED094F7226E054B0075C6AE /* HPFloatMenu */;
@@ -671,6 +693,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HPFloatMenuExample.app/HPFloatMenuExample";
 			};
 			name = Debug;
 		};
@@ -690,6 +713,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HPFloatMenuExample.app/HPFloatMenuExample";
 			};
 			name = Release;
 		};

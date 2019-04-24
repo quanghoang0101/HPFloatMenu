@@ -12,35 +12,84 @@ import HPFloatMenu
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var button: UIButton!
-    
+    lazy var button: UIButton = {
+        let button = UIButton(type: .custom)
+        button.backgroundColor = .red
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Menu", for: .normal)
+        button.addTarget(self, action: #selector(showMenu(_:)), for: .touchUpInside)
+        return button
+    }()
+
     lazy var floatMenuView: FloatMenuView = {
         let view = FloatMenuView(frame: .zero)
         return view
     }()
 
+    open var menuStyle: MenuStyle!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.button.applyRadius(radius: 30)
         self.setDefaultItems()
+        self.view.addSubview(button)
+
+        switch menuStyle! {
+        case .topLeft:
+            self.button.snp.makeConstraints { (maker) in
+                maker.top.equalToSuperview().offset(100)
+                maker.leading.equalToSuperview().offset(50)
+                maker.width.height.equalTo(60)
+            }
+        case .topRight:
+            self.button.snp.makeConstraints { (maker) in
+                maker.top.equalToSuperview().offset(100)
+                maker.trailing.equalToSuperview().offset(-50)
+                maker.width.height.equalTo(60)
+            }
+        case .bottomLeft:
+            self.button.snp.makeConstraints { (maker) in
+                maker.bottom.equalToSuperview().offset(-100)
+                maker.leading.equalToSuperview().offset(50)
+                maker.width.height.equalTo(60)
+            }
+        case .bottomRight:
+            self.button.snp.makeConstraints { (maker) in
+                maker.bottom.equalToSuperview().offset(-100)
+                maker.trailing.equalToSuperview().offset(-50)
+                maker.width.height.equalTo(60)
+            }
+        }
+
+        self.button.applyRadius(radius: 30)
     }
 
     func setDefaultItems() {
 
-        let group = FloatMenuItem(with: "Group", colorIcon: UIColor(hexString: "#CFCFCF")!)
+        let group = FloatMenuItem(with: "Group", config: ItemConfigation(colorIcon: UIColor(hexString: "#CFCFCF")!))
         floatMenuView.addItem(group)
 
-        let watch = FloatMenuItem(with: "Watch", colorIcon: UIColor(hexString: "#969696")!)
+        let watch = FloatMenuItem(with: "Watch", config: ItemConfigation(colorIcon: UIColor(hexString: "#969696")!))
         floatMenuView.addItem(watch)
 
-        let settings = FloatMenuItem(with: "Settings", colorIcon: UIColor(hexString: "#6D6C6C")!)
+        let settings = FloatMenuItem(with: "Settings", config: ItemConfigation(colorIcon: UIColor(hexString: "#6D6C6C")!))
         floatMenuView.addItem(settings)
     }
 
     // MARK: - Action
-    @IBAction private func showMenu(_ sender: Any) {
-        self.floatMenuView.showMenu(at: button, with: self.view)
+    @objc private func showMenu(_ sender: Any) {
+        switch menuStyle! {
+        case .topLeft:
+            self.floatMenuView.position = .topLeft
+        case .topRight:
+            self.floatMenuView.position = .topRight
+        case .bottomLeft:
+            self.floatMenuView.position = .bottomLeft
+        case .bottomRight:
+            self.floatMenuView.position = .bottomRight
+        }
+
+        self.floatMenuView.showMenu(at: sender as! UIButton)
     }
 }
 

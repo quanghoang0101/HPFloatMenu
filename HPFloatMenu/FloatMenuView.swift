@@ -19,8 +19,8 @@ public class FloatMenuView: UIView {
     }
 
     public var animationSpeed: Double = 0.1
-    public var spacingItem: CGFloat = 35
-    public var position: MenuPosition = .bottom
+    public var spacingItem: CGFloat = 15
+    public var position: MenuPosition = .bottomLeft
     public var animation: FloatMenuAnimation = .fromLeft
 
     // MARK: - Lazy properties
@@ -52,8 +52,8 @@ public class FloatMenuView: UIView {
 
     // MARK: - Private properties
     private var items: [FloatMenuItem] = []
-    private weak var senderView: UIView?
-    private weak var parentView: UIView?
+    private var senderView: UIView?
+    private weak var originalSenderView: UIView?
 
     // MARK: - Init
     public init(frame: CGRect, position: MenuPosition, animation: FloatMenuAnimation) {
@@ -83,10 +83,9 @@ public class FloatMenuView: UIView {
         items.removeAll()
     }
 
-    public func showMenu(at senderView: UIView, with parentView: UIView) {
+    public func showMenu(at senderView: UIView) {
         // Store sender views
-        self.senderView = senderView
-        self.parentView = parentView
+        self.senderView = senderView.snapshotView(afterScreenUpdates: false)
 
         // Add view
         self.windowView?.addSubview(self)
@@ -102,10 +101,12 @@ public class FloatMenuView: UIView {
 
         // Get new rect of sender view
         let newRect = senderView.convert(senderView.bounds, to: nil)
-        self.addSubview(senderView)
-        senderView.snp.makeConstraints { (maker) in
+        self.addSubview(self.senderView!)
+        self.senderView?.snp.makeConstraints { (maker) in
             maker.top.equalToSuperview().offset(newRect.minY)
             maker.leading.equalToSuperview().offset(newRect.minX)
+            maker.width.equalTo(senderView.frame.width)
+            maker.height.equalTo(senderView.frame.height)
         }
 
         // Dislay menu items
@@ -121,7 +122,6 @@ public class FloatMenuView: UIView {
 
         for i in 0..<items.count {
             let item = items[i]
-            if item.isHidden == true { continue }
             self.mainView.addSubview(item.containerView)
             item.containerView.layer.transform = CATransform3DIdentity
             item.containerView.alpha = 0
@@ -133,16 +133,32 @@ public class FloatMenuView: UIView {
             } else {
                 previousView = items[i-1].containerView
             }
-            item.containerView.snp.makeConstraints { (maker) in
-                if i == 0 {
+            switch self.position {
+            case .bottomLeft:
+                item.iconAlignment = .left
+                item.containerView.snp.makeConstraints { (maker) in
                     maker.bottom.equalTo(previousView!.snp.top).offset(-spacing)
-                } else {
-                    maker.bottom.equalTo(previousView!.snp.bottom).offset(-spacing)
+                    maker.leading.equalTo(senderView!.snp.leading).offset(self.senderView!.frame.width/2 - item.config.iconSize/2)
                 }
-                maker.trailing.equalTo(senderView!.snp.trailing).offset(-self.senderView!.frame.width/2 + item.iconSize/2)
+            case .bottomRight:
+                item.iconAlignment = .right
+                item.containerView.snp.makeConstraints { (maker) in
+                    maker.bottom.equalTo(previousView!.snp.top).offset(-spacing)
+                    maker.trailing.equalTo(senderView!.snp.trailing).offset(-self.senderView!.frame.width/2 + item.config.iconSize/2)
+                }
+            case .topLeft:
+                item.iconAlignment = .left
+                item.containerView.snp.makeConstraints { (maker) in
+                    maker.top.equalTo(previousView!.snp.bottom).offset(spacing)
+                    maker.leading.equalTo(senderView!.snp.leading).offset(self.senderView!.frame.width/2 - item.config.iconSize/2)
+                }
+            case .topRight:
+                item.iconAlignment = .right
+                item.containerView.snp.makeConstraints { (maker) in
+                    maker.top.equalTo(previousView!.snp.bottom).offset(spacing)
+                    maker.trailing.equalTo(senderView!.snp.trailing).offset(-self.senderView!.frame.width/2 + item.config.iconSize/2)
+                }
             }
-            self.layoutIfNeeded()
-
             animationGroup.enter()
             item.containerView.layer.transform = CATransform3DMakeScale(0.4, 0.4, 1)
             UIView.animate(withDuration: 0.3, delay: delay,
@@ -163,7 +179,6 @@ public class FloatMenuView: UIView {
         var delay = 0.0
         let animationGroup = DispatchGroup()
         for item in items.reversed() {
-            if item.isHidden == true { continue }
             animationGroup.enter()
             UIView.animate(withDuration: 0.15, delay: delay, options: [], animations: { () -> Void in
                 item.containerView.layer.transform = CATransform3DMakeScale(0.4, 0.4, 1)
@@ -178,12 +193,9 @@ public class FloatMenuView: UIView {
             self?.overlayView.alpha = 0
         }) {[weak self] _ in
             guard let `self` = self else {return}
-            self.parentView?.addSubview(self.senderView!)
-            self.senderView!.snp.makeConstraints { (maker) in
-                maker.trailing.equalTo(-32)
-                maker.bottom.equalTo(self.parentView!.snp.bottom).offset(-42)
-            }
+            self.senderView?.removeFromSuperview()
             self.removeFromSuperview()
+            self.items.forEach {$0.containerView.removeFromSuperview()}
         }
     }
 
