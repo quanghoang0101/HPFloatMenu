@@ -32,7 +32,8 @@ Forks, patches and other feedback are welcome.
 
 ## Creator
 ### HPFloatMenu
-[Quang Hoang](https://github.com/quanghoang0101)
+[Quang Hoang](https://github.com/quanghoang0101) 
+
 [Blog](https://medium.com/@phanquanghoang)
 
 ## License
