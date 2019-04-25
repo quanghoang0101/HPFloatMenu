@@ -17,7 +17,7 @@ HPFloatMenu with cool animation for your iOS app, easy setup and use!
 # Installation
 #### CocoaPods
 ```
-pod 'HPFloatMenu`
+pod 'HPFloatMenu'
 ```
 #### Manually
 Copy the `HPFloatMenu` folder to your project.
