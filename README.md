@@ -9,6 +9,7 @@
 [![Issues](https://img.shields.io/github/issues/quanghoang0101/HPFloatMenu.svg?style=flat
 )](https://github.com/quanghoang0101/HPFloatMenu/issues?state=open)
 ![Build](https://travis-ci.com/quanghoang0101/HPFloatMenu.svg?branch=master)
+[![codecov](https://codecov.io/gh/quanghoang0101/HPFloatMenu/branch/master/graph/badge.svg)](https://codecov.io/gh/quanghoang0101/HPFloatMenu)
 
 HPFloatMenu with cool animation for your iOS app, easy setup and use!
 
