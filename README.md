@@ -24,5 +24,16 @@ Copy the `HPFloatMenu` folder to your project.
 ### Setup
 Add `import HPFloatMenu` in your file
 
+## Requirements
+Requires Swift 5.0 and iOS 9.0.
+
+## Contributing
+Forks, patches and other feedback are welcome.
+
+## Creator
+### HPFloatMenu
+[Quang Hoang](https://github.com/quanghoang0101)
+[Blog](https://medium.com/@phanquanghoang)
+
 ## License
 HPFloatMenu is available under the MIT license. See the [LICENSE](./LICENSE) file for more info.
