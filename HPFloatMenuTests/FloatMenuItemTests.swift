@@ -20,9 +20,6 @@ class FloatMenuItemTests: XCTestCase {
     }
 
     func testInit() {
-        let menuItem1 = FloatMenuItem(with: "Test", colorIcon: .red)
-        XCTAssert(menuItem1 != nil, "menuItem1 is nil")
-
         let menuItem2 = FloatMenuItem(with: "Test", icon: UIImage())
         XCTAssert(menuItem2 != nil, "menuItem2 is nil")
     }
