@@ -10,7 +10,7 @@
 )](https://github.com/quanghoang0101/HPFloatMenu/issues?state=open)
 ![Build](https://travis-ci.com/quanghoang0101/HPFloatMenu.svg?branch=master)
 
-Floating menu with cool animation for your iOS app, easy setup and use!
+HPFloatMenu with cool animation for your iOS app, easy setup and use!
 
 ![sample](Screenshots/HPFloatMenu.gif)
 
@@ -48,17 +48,17 @@ public struct ItemConfigation {
     public var iconSize: CGFloat!
 }
 ```
-* init item with tile and icon
+* init item with title and icon
 ```Swift
 init(with title: String, icon: UIImage)
 ```
 
-* init item with tile, icon and custom configation
+* init item with title, icon and custom configation
 ```Swift
 init(with title: String, icon: UIImage, config: ItemConfigation)
 ```
 
-* init item with tile and configation
+* init item with title and configation
 ```Swift
 init(with title: String, config: ItemConfigation) 
 ```
