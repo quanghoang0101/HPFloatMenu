@@ -19,7 +19,7 @@ public class FloatMenuView: UIView {
 
     // MARK: -
     public var animationSpeed: Double = 0.1
-    public var spacingItem: CGFloat = 15
+    public var spacingItem: CGFloat = 15.0
     public var position: MenuPosition = .bottomLeft
 
     public weak var delegate: FloatMenuDelegate?

@@ -19,7 +19,8 @@ target 'HPFloatMenuExample' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'HPFloatMenu', :path => '../HPFloatMenu'
+  #pod 'HPFloatMenu', :path => '../HPFloatMenu'
+  pod 'HPFloatMenu'
   # Pods for HPFloatMenuExample
 
 end
