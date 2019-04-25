@@ -11,6 +11,8 @@
 
 Floating menu with cool animation for your iOS app, easy setup and use!
 
+![sample](Screenshots/HPFloatMenu.gif)
+
 # Installation
 #### CocoaPods
 ```
