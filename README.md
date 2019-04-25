@@ -13,7 +13,7 @@
 
 HPFloatMenu with cool animation for your iOS app, easy setup and use!
 
-![sample](Screenshots/HPFloatMenu.gif)
+![sample](https://media.giphy.com/media/mEcFWs5dEvdwSTAfRY/giphy.gif)
 
 # Installation
 #### CocoaPods
