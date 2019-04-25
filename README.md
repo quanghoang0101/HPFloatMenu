@@ -61,7 +61,7 @@ init(with title: String, icon: UIImage, config: ItemConfigation)
 ```Swift
 init(with title: String, config: ItemConfigation) 
 ```
-### monitor the states of menu, you can use `FloatMenuDelegate` use this:
+### Monitor the states of menu, you can use `FloatMenuDelegate` use this:
 ```swift
 func floatMenuDidOpen(_ menu: FloatMenuView)
 func floatMenuDidClose(_ menu: FloatMenuView)
@@ -117,6 +117,7 @@ extension ViewController: FloatMenuDelegate {
 ```
 ## Requirements
 Swift 5.0
+
 iOS 9.0+
 
 ## Contributing
