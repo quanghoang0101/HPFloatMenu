@@ -48,6 +48,7 @@
 /* Begin PBXFileReference section */
 		0E59FFF922704C7A002496D8 /* FloatMenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatMenuItemTests.swift; sourceTree = "<group>"; };
 		0E59FFFD22706438002496D8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		0E6C5CD3227170A9009193CD /* HPFloatMenu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = HPFloatMenu.gif; sourceTree = "<group>"; };
 		0ED094F8226E054B0075C6AE /* HPFloatMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPFloatMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED094FB226E054B0075C6AE /* HPFloatMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPFloatMenu.h; sourceTree = "<group>"; };
 		0ED094FC226E054B0075C6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,12 +108,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E6C5CD222717083009193CD /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				0E6C5CD3227170A9009193CD /* HPFloatMenu.gif */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		0ED094EE226E054B0075C6AE = {
 			isa = PBXGroup;
 			children = (
 				0ED094FA226E054B0075C6AE /* HPFloatMenu */,
 				0ED09505226E054B0075C6AE /* HPFloatMenuTests */,
 				0ED09517226E05EE0075C6AE /* HPFloatMenuExample */,
+				0E6C5CD222717083009193CD /* Screenshots */,
 				0ED094F9226E054B0075C6AE /* Products */,
 				8A0B2BE921CD4E1E9DAA91EF /* Pods */,
 				77E3E6F20E7E861F0CB1B390 /* Frameworks */,
