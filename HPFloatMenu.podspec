@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "HPFloatMenu"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "HPFloatMenu with cool animation for your iOS app, easy setup and use!"
   spec.description  = "A library for floating menu, user can easy custom the menu with icons and text."
   spec.homepage     = "https://github.com/quanghoang0101/HPFloatMenu"
