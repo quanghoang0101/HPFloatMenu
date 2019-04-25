@@ -2,9 +2,9 @@
 
 [![Platform](http://img.shields.io/badge/platform-iOS-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
-[![Version](https://img.shields.io/cocoapods/v/HPFloatMenu.svg?style=flat)](https://cocoapods.org/pods/HPFloatMenu)
 [![Language](http://img.shields.io/badge/language-Swift-brightgreen.svg?style=flat
 )](https://developer.apple.com/swift)
+[![Version](https://img.shields.io/cocoapods/v/HPFloatMenu.svg?style=flat)](https://cocoapods.org/pods/HPFloatMenu)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
 [![Issues](https://img.shields.io/github/issues/quanghoang0101/HPFloatMenu.svg?style=flat
