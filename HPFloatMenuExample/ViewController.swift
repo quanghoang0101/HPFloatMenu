@@ -23,6 +23,7 @@ class ViewController: UIViewController {
 
     lazy var floatMenuView: FloatMenuView = {
         let view = FloatMenuView(frame: .zero)
+        view.delegate = self
         return view
     }()
 
@@ -90,6 +91,21 @@ class ViewController: UIViewController {
         }
 
         self.floatMenuView.showMenu(at: sender as! UIButton)
+    }
+}
+
+extension ViewController: FloatMenuDelegate {
+    func floatMenuDidOpen(_ menu: FloatMenuView) {
+        print("FLoat menu did open\n")
+    }
+
+    func floatMenuDidClose(_ menu: FloatMenuView) {
+        print("Float menu did close\n")
+    }
+
+    func floatMenuDidSelectItem(_ menu: FloatMenuView, at index: Int) {
+        print("Did select item at index \(index)\n")
+        menu.dimissItems()
     }
 }
 

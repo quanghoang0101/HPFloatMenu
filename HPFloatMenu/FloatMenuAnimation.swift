@@ -7,9 +7,3 @@
 //
 
 import Foundation
-
-public enum FloatMenuAnimation: Int {
-    case fromRight = 0
-    case fromLeft
-    case fromCenter
-}

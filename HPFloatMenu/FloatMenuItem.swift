@@ -61,6 +61,9 @@ public class FloatMenuItem: NSObject {
         }
     }
 
+    // MARK: - Action callback
+    var itemDidSelect: ((_ index: Int) -> Void)?
+
     // MARK: - Lazy properties
     lazy var containerView: UIView = {
         let view = UIView(frame: .zero)
@@ -98,6 +101,7 @@ public class FloatMenuItem: NSObject {
         view.snp.makeConstraints { (maker) in
             maker.top.bottom.leading.trailing.equalToSuperview()
         }
+        view.addTarget(self, action: #selector(selectedItem(_:)), for: .touchUpInside)
         return view
     }()
 
@@ -179,5 +183,9 @@ public class FloatMenuItem: NSObject {
                 maker.trailing.equalTo(iconView.snp.leading).offset(-15)
             }
         }
+    }
+
+    @objc private func selectedItem(_ sender: UIButton) {
+        self.itemDidSelect?(sender.tag)
     }
 }

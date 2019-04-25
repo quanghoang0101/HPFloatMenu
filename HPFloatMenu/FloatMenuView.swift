@@ -9,19 +9,26 @@
 import UIKit
 import SnapKit
 
+public protocol FloatMenuDelegate: class {
+    func floatMenuDidOpen(_ menu: FloatMenuView)
+    func floatMenuDidClose(_ menu: FloatMenuView)
+    func floatMenuDidSelectItem(_ menu: FloatMenuView, at index: Int)
+}
+
 public class FloatMenuView: UIView {
 
     // MARK: -
+    public var animationSpeed: Double = 0.1
+    public var spacingItem: CGFloat = 15
+    public var position: MenuPosition = .bottomLeft
+
+    public weak var delegate: FloatMenuDelegate?
+
     public var colorOverlay: UIColor = UIColor(white: 0, alpha: 0.5) {
         didSet {
             overlayView.backgroundColor = colorOverlay
         }
     }
-
-    public var animationSpeed: Double = 0.1
-    public var spacingItem: CGFloat = 15
-    public var position: MenuPosition = .bottomLeft
-    public var animation: FloatMenuAnimation = .fromLeft
 
     // MARK: - Lazy properties
     private lazy var overlayView: UIView = {
@@ -56,10 +63,9 @@ public class FloatMenuView: UIView {
     private weak var originalSenderView: UIView?
 
     // MARK: - Init
-    public init(frame: CGRect, position: MenuPosition, animation: FloatMenuAnimation) {
+    public init(frame: CGRect, position: MenuPosition) {
         super.init(frame: frame)
         self.position = position
-        self.animation = animation
     }
 
     override public init(frame: CGRect) {
@@ -111,6 +117,9 @@ public class FloatMenuView: UIView {
 
         // Dislay menu items
         self.displayMenuItems()
+
+        // Callback did open menu
+        self.delegate?.floatMenuDidOpen(self)
     }
 
     // MARK: - Private functions
@@ -126,6 +135,13 @@ public class FloatMenuView: UIView {
             item.containerView.layer.transform = CATransform3DIdentity
             item.containerView.alpha = 0
             item.tag = i
+
+
+            // Callback menu did select item
+            item.itemDidSelect = {[weak self] index in
+                guard let `self` = self else {return}
+                self.delegate?.floatMenuDidSelectItem(self, at: index)
+            }
 
             var previousView: UIView!
             if i == 0 {
@@ -196,6 +212,9 @@ public class FloatMenuView: UIView {
             self.senderView?.removeFromSuperview()
             self.removeFromSuperview()
             self.items.forEach {$0.containerView.removeFromSuperview()}
+
+            // Callback menu did close
+            self.delegate?.floatMenuDidClose(self)
         }
     }
 
