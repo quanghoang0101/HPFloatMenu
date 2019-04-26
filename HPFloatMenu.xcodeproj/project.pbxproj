@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E01F75C2272A0EA005E2CD7 /* RadialGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01F75B2272A0EA005E2CD7 /* RadialGradientLayer.swift */; };
 		0E59FFFA22704C7A002496D8 /* FloatMenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFF922704C7A002496D8 /* FloatMenuItemTests.swift */; };
 		0E59FFFE22706438002496D8 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E59FFFD22706438002496D8 /* ListViewController.swift */; };
 		0ED09502226E054B0075C6AE /* HPFloatMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED094F8226E054B0075C6AE /* HPFloatMenu.framework */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E01F75B2272A0EA005E2CD7 /* RadialGradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadialGradientLayer.swift; sourceTree = "<group>"; };
 		0E59FFF922704C7A002496D8 /* FloatMenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatMenuItemTests.swift; sourceTree = "<group>"; };
 		0E59FFFD22706438002496D8 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0E6C5CD3227170A9009193CD /* HPFloatMenu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = HPFloatMenu.gif; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				0ED0952A226E130B0075C6AE /* FloatMenuItem.swift */,
 				0ED09530226ED1A90075C6AE /* FloatMenuPosition.swift */,
 				0ED09533226ED2550075C6AE /* FloatMenuAnimation.swift */,
+				0E01F75B2272A0EA005E2CD7 /* RadialGradientLayer.swift */,
 				0ED09532226ED1AE0075C6AE /* Extensions */,
 			);
 			path = HPFloatMenu;
@@ -454,6 +457,7 @@
 				0ED09534226ED2550075C6AE /* FloatMenuAnimation.swift in Sources */,
 				0ED0952D226ECD5E0075C6AE /* UIColor+Extensions.swift in Sources */,
 				0ED0952F226ED02C0075C6AE /* UIView+Extensions.swift in Sources */,
+				0E01F75C2272A0EA005E2CD7 /* RadialGradientLayer.swift in Sources */,
 				0ED09529226E08D10075C6AE /* FloatMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,6 +737,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32KV9Q45UD;
 				INFOPLIST_FILE = HPFloatMenuExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -751,6 +756,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32KV9Q45UD;
 				INFOPLIST_FILE = HPFloatMenuExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

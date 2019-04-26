@@ -30,14 +30,30 @@ public class FloatMenuView: UIView {
         }
     }
 
+    public var radialGradientColors: [UIColor] {
+        get {
+            return radialGradientLayer.colors
+        }
+        set {
+            radialGradientLayer.colors = newValue
+        }
+    }
+
     // MARK: - Lazy properties
     private lazy var overlayView: UIView = {
         let view = UIView(frame: .zero)
         view.backgroundColor = colorOverlay
+        view.layer.insertSublayer(radialGradientLayer, at: 0)
         self.addSubview(view)
         view.snp.makeConstraints { (maker) in
             maker.leading.top.trailing.bottom.equalToSuperview()
         }
+        return view
+    }()
+
+    private lazy var radialGradientLayer: RadialGradientLayer = {
+        let view = RadialGradientLayer()
+        view.frame = windowView.bounds
         return view
     }()
 
@@ -54,17 +70,16 @@ public class FloatMenuView: UIView {
     }()
 
     lazy var windowView = {
-        return UIApplication.shared.keyWindow
+        return UIApplication.shared.keyWindow!
     }()
 
     // MARK: - Private properties
     private var items: [FloatMenuItem] = []
     private var senderView: UIView?
-    private weak var originalSenderView: UIView?
 
     // MARK: - Init
-    public init(frame: CGRect, position: MenuPosition) {
-        super.init(frame: frame)
+    public convenience init(frame: CGRect, position: MenuPosition) {
+        self.init(frame: frame)
         self.position = position
     }
 
@@ -78,6 +93,7 @@ public class FloatMenuView: UIView {
 
     override public func layoutSubviews() {
         super.layoutSubviews()
+        self.radialGradientLayer.setNeedsDisplay()
     }
 
     // MARK: - Public functions
@@ -94,7 +110,7 @@ public class FloatMenuView: UIView {
         self.senderView = senderView.snapshotView(afterScreenUpdates: false)
 
         // Add view
-        self.windowView?.addSubview(self)
+        self.windowView.addSubview(self)
         self.snp.makeConstraints { (maker) in
             maker.leading.top.trailing.bottom.equalToSuperview()
         }

@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setDefaultItems()
+        self.floatMenuView.radialGradientColors = [UIColor(hexString: "#2E2E2E")!.withAlphaComponent(0.9), UIColor(hexString: "#383838")!]
         self.view.addSubview(button)
 
         switch menuStyle! {
@@ -75,6 +76,7 @@ class ViewController: UIViewController {
 
         let settings = FloatMenuItem(with: "Settings", config: ItemConfigation(colorIcon: UIColor(hexString: "#6D6C6C")!))
         floatMenuView.addItem(settings)
+
     }
 
     // MARK: - Action
