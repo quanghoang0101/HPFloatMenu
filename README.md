@@ -4,6 +4,7 @@
 )](https://developer.apple.com/iphone/index.action)
 [![Language](http://img.shields.io/badge/language-Swift-brightgreen.svg?style=flat
 )](https://developer.apple.com/swift)
+[![Version](https://img.shields.io/cocoapods/v/HPFloatMenu.svg?style=flat)](https://cocoapods.org/pods/HPFloatMenu)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
 [![Issues](https://img.shields.io/github/issues/quanghoang0101/HPFloatMenu.svg?style=flat
@@ -13,7 +14,7 @@
 
 HPFloatMenu with cool animation for your iOS app, easy setup and use!
 
-![sample](https://media.giphy.com/media/mEcFWs5dEvdwSTAfRY/giphy.gif)
+![sample](https://media.giphy.com/media/MDyXlMUYGJT7qHo5pF/giphy.gif)
 
 # Installation
 #### CocoaPods
@@ -37,6 +38,14 @@ var spacingItem: CGFloat = 15.0
 * position of the menu
 ```Swift
 var position: MenuPosition = .bottomLeft
+```
+* overlay color
+```Swift
+var colorOverlay: UIColor = UIColor(white: 0, alpha: 0.5)
+```
+* radial gradient color
+```Swift
+var radialGradientColors: [UIColor]
 ```
 ### FloatMenuItem Customizable
 * configation for item
@@ -96,6 +105,7 @@ func setDefaultItems() {
 override func viewDidLoad() {
    super.viewDidLoad()
    self.setDefaultItems()
+   self.floatMenuView.radialGradientColors = [UIColor(hexString: "#2E2E2E")!.withAlphaComponent(0.9), UIColor(hexString: "#383838")!]
 }
 
 @objc private func showMenu(_ sender: Any) {
