@@ -1,7 +1,7 @@
 PODS:
-  - HPFloatMenu (0.0.4):
-    - SnapKit (= 4.2.0)
-  - SnapKit (4.2.0)
+  - HPFloatMenu (1.0.0):
+    - SnapKit (= 5.0.0)
+  - SnapKit (5.0.0)
 
 DEPENDENCIES:
   - HPFloatMenu (from `../HPFloatMenu`)
@@ -16,9 +16,9 @@ EXTERNAL SOURCES:
     :path: "../HPFloatMenu"
 
 SPEC CHECKSUMS:
-  HPFloatMenu: f3c72f3bab1f85d873f994759f95fde7c7d5b297
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  HPFloatMenu: 26197a815f956e2eb3f19241ea493e577ec02fff
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: 5936cc9b421dd101e46335554204e5b87e813c8f
+PODFILE CHECKSUM: 2b38d9eec6ba758ceabffd4a521ae70cfbd50fcb
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.1

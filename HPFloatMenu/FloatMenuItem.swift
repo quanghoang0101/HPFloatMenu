@@ -157,15 +157,15 @@ public class FloatMenuItem: NSObject {
 
     // MARK: - Helpers
     private func alignIcon(with alignment: ItemIconAlignment) {
-        iconView.snp_removeConstraints()
-        titleLabel.snp_removeConstraints()
+        iconView.snp.removeConstraints()
+        titleLabel.snp.removeConstraints()
         switch alignment {
         case .left:
             iconView.snp.makeConstraints { (maker) in
                 maker.width.height.equalTo(self.config.iconSize)
                 maker.leading.equalTo(0)
-                maker.top.bottom.equalToSuperview().priorityMedium()
-                maker.center.equalToSuperview().priorityMedium()
+                maker.top.bottom.equalToSuperview().priority(.medium)
+                maker.center.equalToSuperview().priority(.medium)
             }
             titleLabel.snp.makeConstraints { (maker) in
                 maker.trailing.top.bottom.equalTo(0)
@@ -175,8 +175,8 @@ public class FloatMenuItem: NSObject {
             iconView.snp.makeConstraints { (maker) in
                 maker.width.height.equalTo(self.config.iconSize)
                 maker.trailing.equalTo(0)
-                maker.top.bottom.equalToSuperview().priorityMedium()
-                maker.center.equalToSuperview().priorityMedium()
+                maker.top.bottom.equalToSuperview().priority(.medium)
+                maker.center.equalToSuperview().priority(.medium)
             }
             titleLabel.snp.makeConstraints { (maker) in
                 maker.leading.top.bottom.equalTo(0)

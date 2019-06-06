@@ -14,9 +14,9 @@ Pod::Spec.new do |spec|
   spec.homepage     = "https://github.com/quanghoang0101/HPFloatMenu"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Hoang" => "quanghoang0101@yahoo.com.vn" }
-  spec.platform     = :ios, "9.0"
+  spec.platform     = :ios, "10.0"
   spec.source       = { :git => "https://github.com/quanghoang0101/HPFloatMenu.git", :tag => "#{spec.version}" }
   spec.source_files  = "HPFloatMenu/**/*.{swift}"
-  spec.dependency "SnapKit", "4.2.0"
+  spec.dependency "SnapKit", "5.0.0"
   spec.swift_version = "5"
 end
